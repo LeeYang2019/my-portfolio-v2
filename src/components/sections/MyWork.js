@@ -2,16 +2,16 @@ import React, { Fragment, Component } from 'react';
 import axios from 'axios';
 import PortfolioItems from './work/PortfolioItems';
 
-let githubClientId;
-let githubClientSecret;
+// let githubClientId;
+// let githubClientSecret;
 
-if (process.env.NODE_ENV !== 'production') {
-  githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
-  githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
-} else {
-  githubClientId = process.env.GITHUB_CLIENT_ID;
-  githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
+//   githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
+// } else {
+//   githubClientId = process.env.GITHUB_CLIENT_ID;
+//   githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
+// }
 
 class MyWork extends Component {
   state = {
@@ -22,7 +22,7 @@ class MyWork extends Component {
   async componentDidMount() {
     this.setState({ loading: true });
     const res = await axios.get(
-      `http://api.github.com/users/LeeYang2019/repos?per_page=40&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`
+      `http://api.github.com/users/LeeYang2019/repos?per_page=40&sort=created:asc&client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${process.env.GITHUB_CLIENT_SECRET}`
     );
     this.setState({ repos: res.data, loading: false });
   }
