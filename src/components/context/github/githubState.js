@@ -14,8 +14,8 @@ if (process.env.NODE_ENV !== 'production') {
   githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
 } else {
   console.log('in production');
-  githubClientId = process.env.GITHUB_CLIENT_ID;
-  githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
+  githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
+  githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
 }
 
 const GithubState = (props) => {
@@ -32,7 +32,7 @@ const GithubState = (props) => {
     setLoading();
 
     const res = await axios.get(
-      `http://api.github.com/users/LeeYang2019/repos?per_page=40&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`
+      `https://api.github.com/users/LeeYang2019/repos?per_page=50&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`
     );
 
     const repos = res.data.filter((repo) => repo.stargazers_count > 0);
