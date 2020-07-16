@@ -202,15 +202,6 @@ header .header_logo_lee {
   color: var(--clr-light);
 }
 
-@media (min-width: 1025px) {
-  .portfolio {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 1500px;
-    grid-gap: 1em;
-  }
-}
-
 @media (min-width: 800px) {
   .about-me {
     max-width: 1000px;
@@ -226,7 +217,7 @@ header .header_logo_lee {
   .portfolio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 1500px;
+    width: 1200px;
     grid-gap: 1em;
   }
 }

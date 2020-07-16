@@ -1,48 +1,35 @@
-import React, { Fragment, Component } from 'react';
-import axios from 'axios';
+import React, { Fragment, useContext, useEffect } from 'react';
 import PortfolioItems from './work/PortfolioItems';
+import GithubContext from '../../components/context/github/githubContext';
 
-// let githubClientId;
-// let githubClientSecret;
+const MyWork = () => {
+  const githubContext = useContext(GithubContext);
+  const { searchUserRepos, repos } = githubContext;
 
-// if (process.env.NODE_ENV !== 'production') {
-//   githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
-//   githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
-// } else {
-//   githubClientId = process.env.GITHUB_CLIENT_ID;
-//   githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
-// }
+  useEffect(() => {
+    console.log('useEffect in myWork executes');
 
-class MyWork extends Component {
-  state = {
-    repos: [],
-    loading: false,
-  };
+    searchUserRepos();
+    // eslint-disable-next-line
+  }, []);
 
-  async componentDidMount() {
-    this.setState({ loading: true });
-    const res = await axios.get(
-      `http://api.github.com/users/LeeYang2019/repos?per_page=40&sort=created:asc&client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${process.env.GITHUB_CLIENT_SECRET}`
-    );
-    this.setState({ repos: res.data, loading: false });
-  }
+  console.log('myWork executes');
+  console.log(repos.length);
 
-  render() {
-    return (
-      <Fragment>
-        <section className="my-work">
-          <h2 className="section__title">My Portfolio</h2>
-          <p className="section__subtitle section__subtitle--work">
-            A range of my work
-          </p>
+  return (
+    <Fragment>
+      <section className="my-work">
+        <h2 className="section__title">My Portfolio</h2>
+        <p className="section__subtitle section__subtitle--work">
+          A range of my work
+        </p>
 
-          <div className="portfolio">
-            <PortfolioItems repos={this.state.repos} />
-          </div>
-        </section>
-      </Fragment>
-    );
-  }
-}
+        <div className="portfolio">
+          <PortfolioItems repos={repos} />
+        </div>
+      </section>
+    </Fragment>
+  );
+};
 
 export default MyWork;

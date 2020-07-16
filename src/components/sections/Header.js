@@ -36,7 +36,7 @@ class Header extends Component {
   };
 
   render() {
-    const logoText = '< nhialeeyang >';
+    const logoText = '<nhialeeyang>';
     return (
       <AppBar
         position="fixed"
