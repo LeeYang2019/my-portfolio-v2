@@ -7,14 +7,9 @@ const MyWork = () => {
   const { searchUserRepos, repos } = githubContext;
 
   useEffect(() => {
-    console.log('useEffect in myWork executes');
-
     searchUserRepos();
     // eslint-disable-next-line
   }, []);
-
-  console.log('myWork executes');
-  console.log(repos.length);
 
   return (
     <Fragment>
