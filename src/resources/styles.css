@@ -291,7 +291,7 @@ header .header_logo_lee {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  min-height: 200px;
+  min-height: 250px;
 }
 
 .portfolio-item-name {

@@ -32,6 +32,9 @@ class PortfolioItem extends Component {
       return <div>loading...</div>;
     }
 
+    const codeMentoring =
+      'A community project I am a part of, working on a "duolingo" (learning platform) for coding. Note: the project is still in-progress.';
+
     return (
       <div className="portfolio-item">
         <div className="portfolio-item-header">
@@ -54,11 +57,15 @@ class PortfolioItem extends Component {
                   : '#fe91ca',
             }}
           >
-            {this.props.repo.language}
+            {this.props.repo.name === 'learn'
+              ? 'TypeScript'
+              : this.props.repo.language}
           </span>
           <div className="portfolio-item-name">{this.props.repo.name}</div>
           <div className="portfolio-item-description">
-            {this.props.repo.description}
+            {this.props.repo.name === 'learn'
+              ? codeMentoring
+              : this.props.repo.description}
           </div>
         </div>
         <div className="portfolio_btns">
