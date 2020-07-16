@@ -49,6 +49,8 @@ class PortfolioItem extends Component {
                   ? 'rgba(104, 0, 107)'
                   : this.props.repo.language === 'Java'
                   ? '#fcbf1e'
+                  : this.props.repo.language === 'TypeScript'
+                  ? '#99b898'
                   : '#fe91ca',
             }}
           >
