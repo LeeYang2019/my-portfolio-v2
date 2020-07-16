@@ -13,7 +13,7 @@
 
   --clr-light: #f7f8fc;
   --clr-dark: #2f2f2f;
-  --clr-accent: #2f71aa;
+  --clr-accent: #0f4c75;
   --clr-accent2: rgb(104, 0, 107);
   --clr-light2: #ffffff;
 
@@ -140,6 +140,7 @@ h3 {
   margin-bottom: 1em;
   color: var(--clr-light2);
 }
+
 /* Header */
 header {
   padding: 10px 0px;
@@ -201,6 +202,15 @@ header .header_logo_lee {
   color: var(--clr-light);
 }
 
+@media (min-width: 1025px) {
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1500px;
+    grid-gap: 1em;
+  }
+}
+
 @media (min-width: 800px) {
   .about-me {
     max-width: 1000px;
@@ -216,7 +226,7 @@ header .header_logo_lee {
   .portfolio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 1000px;
+    width: 1500px;
     grid-gap: 1em;
   }
 }
@@ -282,7 +292,7 @@ header .header_logo_lee {
 
 .portfolio-item-header img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -301,7 +311,7 @@ header .header_logo_lee {
 }
 
 .portfolio-item-description {
-  margin-top: 1.5em;
+  margin-top: 0.5em;
   text-align: left;
   font-style: italic;
   font-size: 15px;

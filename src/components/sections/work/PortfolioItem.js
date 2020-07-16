@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Learn from '../../../resources/images/projectLearn.png';
 
 class PortfolioItem extends Component {
   sate = {
@@ -34,7 +35,10 @@ class PortfolioItem extends Component {
     return (
       <div className="portfolio-item">
         <div className="portfolio-item-header">
-          <img src={img} alt="portfolio project" />
+          <img
+            src={this.props.repo.name === 'learn' ? Learn : img}
+            alt="portfolio project"
+          />
         </div>
         <div className="portfolio-item-body">
           <span
@@ -43,7 +47,9 @@ class PortfolioItem extends Component {
               backgroundColor:
                 this.props.repo.language === 'JavaScript'
                   ? 'rgba(104, 0, 107)'
-                  : '#fcbf1e',
+                  : this.props.repo.language === 'Java'
+                  ? '#fcbf1e'
+                  : '#fe91ca',
             }}
           >
             {this.props.repo.language}
@@ -60,16 +66,20 @@ class PortfolioItem extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Live
+            {this.props.repo.name === 'managingMyTradingCards'
+              ? 'View Video'
+              : 'View Live'}
           </a>
-          <a
-            href={this.props.repo.html_url}
-            className="demo_btn btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            More Info
-          </a>
+          {this.props.repo.name === 'dscrt.ly' ? null : (
+            <a
+              href={this.props.repo.html_url}
+              className="demo_btn btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              More Info
+            </a>
+          )}
         </div>
       </div>
     );
