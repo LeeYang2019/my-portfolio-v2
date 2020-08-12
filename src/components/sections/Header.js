@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import MenuIcon from '@material-ui/icons/Menu';
-import IconButton from '@material-ui/core/IconButton';
-import SideDrawer from '../SideDrawer';
+// import MenuIcon from '@material-ui/icons/Menu';
+// import IconButton from '@material-ui/core/IconButton';
+// import SideDrawer from '../SideDrawer';
+import { scroller } from 'react-scroll';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 class Header extends Component {
   state = {
@@ -35,23 +38,77 @@ class Header extends Component {
     console.log('value: ' + this.state.drawerOpen);
   };
 
+  scrollToElement = (element) => {
+    scroller.scrollTo(element, {
+      duration: 500,
+      // delay: 100,
+      smooth: true,
+      // offset: -150,
+    });
+  };
+
   render() {
     const logoText = '<nhialeeyang>';
     return (
       <AppBar
-        position="fixed"
+        position="static"
         style={{
-          backgroundColor: this.state.headerShow ? '#2f2f2f' : 'transparent',
+          backgroundColor: this.state.headerShow ? '#222831' : '#222831',
           boxShadow: 'none',
           padding: '5px 0px',
         }}
       >
         <Toolbar>
           <div className="header_logo">
-            <div className="header_logo_lee">{logoText}</div>
+            <div
+              className="header_logo_lee"
+              style={{ color: '#2f2f2f', fontSize: '20px' }}
+            >
+              {/* {logoText} */}
+            </div>
           </div>
-
-          <IconButton
+          <div className="contact_links">
+            <ul className="social-list">
+              <li className="social-list__item">
+                <a
+                  className="social-list__link"
+                  href="https://github.com/LeeYang2019"
+                  target="blank"
+                >
+                  <i className="fab fa-github fa-2x"></i>
+                </a>
+              </li>
+              {/* <li className="social-list__item">
+                <a
+                  className="social-list__link"
+                  href="https://www.facebook.com/people/Nyiajlim-Lee-Yang/8632742"
+                >
+                  <i className="fab fa-facebook-square fa-2x"></i>
+                </a>
+              </li> */}
+              <li className="social-list__item">
+                <a
+                  className="social-list__link"
+                  href="https://www.linkedin.com/in/nhialee-yang-b07649181/"
+                  target="blank"
+                >
+                  <i className="fab fa-linkedin fa-2x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <List component="nav">
+            <ListItem button onClick={() => this.scrollToElement('aboutMe')}>
+              About Me
+            </ListItem>
+            <ListItem button onClick={() => this.scrollToElement('myWork')}>
+              My Portfolio
+            </ListItem>
+            <ListItem button onClick={() => this.scrollToElement('contactMe')}>
+              Contact Me
+            </ListItem>
+          </List>
+          {/* <IconButton
             aria-label="Menu"
             color="inherit"
             onClick={(value) => this.toggleDrawer(value)}
@@ -61,7 +118,7 @@ class Header extends Component {
           <SideDrawer
             open={this.state.drawerOpen}
             onClose={(value) => this.toggleDrawer(value)}
-          />
+          /> */}
         </Toolbar>
       </AppBar>
     );

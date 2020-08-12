@@ -15,9 +15,9 @@ const MyWork = () => {
     <Fragment>
       <section className="my-work">
         <h2 className="section__title">My Portfolio</h2>
-        <p className="section__subtitle section__subtitle--work">
+        {/* <p className="section__subtitle section__subtitle--work">
           A range of my work
-        </p>
+        </p> */}
 
         <div className="portfolio">
           <PortfolioItems repos={repos} />
