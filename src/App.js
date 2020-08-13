@@ -15,15 +15,17 @@ function App() {
         <Element>
           <Header />
         </Element>
-        <Element>
-          <Introduction />
-        </Element>
-        {/* <Element name="aboutMe">
+        <div className="wrapper">
+          <Element>
+            <Introduction />
+          </Element>
+          <Element name="myWork">
+            <MyWork />
+          </Element>
+          {/* <Element name="aboutMe">
           <AboutMe />
         </Element> */}
-        <Element name="myWork">
-          <MyWork />
-        </Element>
+        </div>
         <Element name="contactMe">
           <ContactMe />
         </Element>

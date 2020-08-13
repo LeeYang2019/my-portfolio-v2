@@ -14,7 +14,8 @@ const MyWork = () => {
   return (
     <Fragment>
       <section className="my-work">
-        <h2 className="section__title">My Portfolio</h2>
+        <div className="wrapper"></div>
+        <h2 className="section__title">Portfolio</h2>
         {/* <p className="section__subtitle section__subtitle--work">
           A range of my work
         </p> */}

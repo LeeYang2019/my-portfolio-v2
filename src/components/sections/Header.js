@@ -49,24 +49,31 @@ class Header extends Component {
 
   render() {
     const logoText = '<nhialeeyang>';
+    const flexContainer = {
+      display: 'flex',
+      flexDirection: 'row',
+      padding: '0',
+    };
     return (
       <AppBar
         position="static"
         style={{
-          backgroundColor: this.state.headerShow ? '#222831' : '#222831',
+          backgroundColor: this.state.headerShow ? '#00204a' : '#00204a',
+          height: '75px',
           boxShadow: 'none',
           padding: '5px 0px',
+          fontFamily: ['Source Code Pro', 'monospace'],
         }}
       >
-        <Toolbar>
-          <div className="header_logo">
+        <Toolbar style={{ displa: 'flex', justifyContent: 'space-between' }}>
+          {/* <div className="header_logo">
             <div
               className="header_logo_lee"
               style={{ color: '#2f2f2f', fontSize: '20px' }}
             >
-              {/* {logoText} */}
+              {logoText}
             </div>
-          </div>
+          </div> */}
           <div className="contact_links">
             <ul className="social-list">
               <li className="social-list__item">
@@ -97,15 +104,15 @@ class Header extends Component {
               </li>
             </ul>
           </div>
-          <List component="nav">
+          <List component="nav" style={flexContainer}>
             <ListItem button onClick={() => this.scrollToElement('aboutMe')}>
-              About Me
+              About
             </ListItem>
             <ListItem button onClick={() => this.scrollToElement('myWork')}>
-              My Portfolio
+              Portfolio
             </ListItem>
             <ListItem button onClick={() => this.scrollToElement('contactMe')}>
-              Contact Me
+              Contact
             </ListItem>
           </List>
           {/* <IconButton
