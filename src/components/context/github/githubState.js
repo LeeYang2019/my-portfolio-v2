@@ -52,6 +52,9 @@ const GithubState = (props) => {
     );
 
     const decodedContent = window.atob(res.data.content);
+
+    console.log(decodedContent);
+
     const imgSrc = decodedContent
       .split('\n')
       .filter((line) => line.includes('png'))

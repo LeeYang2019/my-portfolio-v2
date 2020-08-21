@@ -105,9 +105,9 @@ class Header extends Component {
             </ul>
           </div>
           <List component="nav" style={flexContainer}>
-            <ListItem button onClick={() => this.scrollToElement('aboutMe')}>
+            {/* <ListItem button onClick={() => this.scrollToElement('aboutMe')}>
               About
-            </ListItem>
+            </ListItem> */}
             <ListItem button onClick={() => this.scrollToElement('myWork')}>
               Portfolio
             </ListItem>

@@ -6,27 +6,31 @@ const AboutMe = () => {
     <div className="about-me-section">
       <section className="about-me">
         <h2 className="section__title section__title--about">Who I am</h2>
-        <p className="section__subtitle section__subtitle--about">
+        {/* <p className="section__subtitle section__subtitle--about">
           Developer based out of Toronto
-        </p>
+        </p> */}
 
         <div className="about-me__body">
           <p>
-            I am a business Analyst with several years of experience in IT. I
-            enjoy working with stakeholders and reading business logic diagrams
-            and performing user acceptance testing. Having that sort of exposure
-            has cultivated in me an interest and passion for software
-            development.
+            I am an aspiring software developer with several years of experience
+            working as a business analyst. Having that sort of exposure has
+            cultivated in me an interest and passion for software development.
           </p>
-          <p>I have experience programming in Java, JavaScript, Php and C.</p>
-          <p>I am an avid hiker and enjoy building things with my hands.</p>
+          <a
+            href="x"
+            className="demo_btn btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Resume
+          </a>
         </div>
 
-        <img
+        {/* <img
           src={NhialeeImg2}
           alt="Nhialee sitting on step"
           className="about-me__img"
-        />
+        /> */}
       </section>
     </div>
   );

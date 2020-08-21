@@ -23,8 +23,8 @@ function App() {
             <MyWork />
           </Element>
           {/* <Element name="aboutMe">
-          <AboutMe />
-        </Element> */}
+            <AboutMe />
+          </Element> */}
         </div>
         <Element name="contactMe">
           <ContactMe />

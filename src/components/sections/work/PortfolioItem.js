@@ -5,6 +5,7 @@ import Learn from '../../../resources/images/projectLearn.png';
 class PortfolioItem extends Component {
   sate = {
     img: '',
+    tech: [],
     loading: false,
   };
 
@@ -15,6 +16,13 @@ class PortfolioItem extends Component {
     );
 
     const decodedContent = window.atob(res.data.content);
+    const techString = decodedContent
+      .split('\n')
+      .filter((line) => line.includes('Tech'));
+    //.map((item) => item.substr(item.indexOf(':') + 2));
+
+    const tech = techString[0] ? techString[0] : null;
+
     const imgSrc = decodedContent
       .split('\n')
       .filter((line) => line.includes('png'))
@@ -22,18 +30,22 @@ class PortfolioItem extends Component {
         return src.substr(src.indexOf('(') + 1).replace(')', '');
       })[0];
 
-    this.setState({ img: imgSrc, loading: false });
+    this.setState({ img: imgSrc, tech, loading: false });
   }
 
   render() {
-    const { img, loading } = this.state;
+    const { img, tech, loading } = this.state;
 
     if (loading) {
       return <div>loading...</div>;
     }
 
     const codeMentoring =
-      'A community project I am a part of, working on a "duolingo" (learning platform) for coding. Note: the project is still in-progress.';
+      'A community project I am a part of, working with other software developers to create a learning platform for coding. Note: the project is still in-progress.';
+    const codeMentoringTech =
+      'Tech: TypeScript, React, Nodejs, Nestjs, Apollo-Graphql, PostgreSQL';
+
+    const inviteCode = 'invitecode: blm';
 
     return (
       <div className="portfolio-item">
@@ -44,7 +56,19 @@ class PortfolioItem extends Component {
               {this.props.repo.name === 'learn'
                 ? codeMentoring
                 : this.props.repo.description}
+              {this.props.repo.name && this.props.repo.name === 'dscrt.ly' ? (
+                <div className="portfolio-item-description-inviteCode">
+                  {inviteCode}
+                </div>
+              ) : null}
             </div>
+            {tech ? (
+              <div className="portfolio-item-technologies">{tech}</div>
+            ) : this.props.repo.name === 'learn' ? (
+              <div className="portfolio-item-technologies">
+                {codeMentoringTech}
+              </div>
+            ) : null}
             <div className="portfolio_btns">
               <a
                 href={this.props.repo.homepage}
@@ -67,7 +91,7 @@ class PortfolioItem extends Component {
                 </a>
               )}
             </div>
-            <div className="technology">
+            {/* <div className="technology">
               <span
                 className="tag"
                 style={{
@@ -85,7 +109,7 @@ class PortfolioItem extends Component {
                   ? 'TypeScript'
                   : this.props.repo.language}
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="portfolio-item-right">
