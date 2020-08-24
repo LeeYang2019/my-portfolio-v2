@@ -314,7 +314,7 @@ header .header_logo_lee {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  margin-top: 15%;
+  margin-top: 10%;
   color: var(--clr-dark);
   box-shadow: var(--bs);
 }
@@ -338,6 +338,10 @@ header .header_logo_lee {
   margin-top: 0.5em;
   text-align: left;
   font-size: 20px;
+}
+
+.portfolio-item-description-inviteCode {
+  margin-top: 0.5em;
 }
 
 .about-me__body {

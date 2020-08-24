@@ -45,7 +45,7 @@ class PortfolioItem extends Component {
     const codeMentoringTech =
       'Tech: TypeScript, React, Nodejs, Nestjs, Apollo-Graphql, PostgreSQL';
 
-    const inviteCode = 'invitecode: blm';
+    const inviteCode = `Invitecode: "blm"`;
 
     return (
       <div className="portfolio-item">
