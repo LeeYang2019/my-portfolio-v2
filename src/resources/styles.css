@@ -314,7 +314,7 @@ header .header_logo_lee {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  margin-top: 7%;
+  margin-top: 15%;
   color: var(--clr-dark);
   box-shadow: var(--bs);
 }

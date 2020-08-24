@@ -6,7 +6,7 @@ const ContactMe = () => {
       <footer className="footer" id="contact">
         <h3>My Contact: </h3>
         <a
-          href="x"
+          href="https://drive.google.com/file/d/1qgHTtbL5catL7Gnn5Qe4jiqBXcdUXPYL/view?usp=sharing"
           className="demo_btn btn"
           target="_blank"
           rel="noopener noreferrer"
