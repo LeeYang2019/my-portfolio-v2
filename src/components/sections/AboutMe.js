@@ -1,15 +1,10 @@
 import React from 'react';
-import NhialeeImg2 from '../../resources/images/nhialee.jpg';
 
 const AboutMe = () => {
   return (
     <div className="about-me-section">
       <section className="about-me">
         <h2 className="section__title section__title--about">Who I am</h2>
-        {/* <p className="section__subtitle section__subtitle--about">
-          Developer based out of Toronto
-        </p> */}
-
         <div className="about-me__body">
           <p>
             I am an aspiring software developer with several years of experience
@@ -25,12 +20,6 @@ const AboutMe = () => {
             View Resume
           </a>
         </div>
-
-        {/* <img
-          src={NhialeeImg2}
-          alt="Nhialee sitting on step"
-          className="about-me__img"
-        /> */}
       </section>
     </div>
   );
