@@ -40,7 +40,7 @@ class Header extends Component {
 
   scrollToElement = (element) => {
     scroller.scrollTo(element, {
-      duration: 500,
+      duration: 0,
       // delay: 100,
       smooth: true,
       // offset: -150,

@@ -7,8 +7,8 @@ import ListItem from '@material-ui/core/ListItem';
 const SideDrawer = ({ open, onClose }) => {
   const scrollToElement = (element) => {
     scroller.scrollTo(element, {
-      duration: 1500,
-      delay: 100,
+      // duration: 1500,
+      // delay: 100,
       smooth: true,
       offset: -150,
     });
