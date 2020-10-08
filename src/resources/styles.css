@@ -11,7 +11,7 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #f3f0ec;
+  --clr-light: #ffffff;
   --clr-dark: #00204a;
   --clr-accent: #005792;
   --clr-accent2: #84a9ac;
@@ -20,7 +20,7 @@
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-body: 1em;
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -53,7 +53,7 @@ body {
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
-  line-height: 1.6;
+  line-height: 1.2em;
 }
 
 .container {
@@ -277,7 +277,7 @@ header .header_logo_lee {
 .my-work {
   background-color: var(--clr-light);
   color: var(--clr-dark);
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,28 +1,7 @@
+import { PictureAsPdfSharp } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import Learn from '../../../resources/images/projectLearn.png';
-import style from 'styled-components';
-
-const RowDiv = style.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-`;
-
-const TitleH3 = style.h3`
-  font-weight: bold;
-  margin-bottom: 1.8rem;
-  font-size: 2.5rem;
-`;
-
-const Img = style.img`
-  max-width: 100%;
-  height: auto;
-
-  vertical-align: middle;
-  border-style: none;
-`;
 
 const fetchRepos = async (name) => {
   const res = await fetch(
@@ -70,11 +49,11 @@ const PortfolioItem = ({repo}) => {
 
   const inviteCode = `Invitecode: "blm"`;
 
-  return (<RowDiv>
-    <div className="col-lg-4 col-sm-12">
+  return (<div className="portfolio-item">
+    <div className="portfolio-item-left">
       <div className="portfolio-item-body">
-        <TitleH3>{repo.name}</TitleH3>
-        <div className="mb-4">
+        <div className="portfolio-item-name">{repo.name}</div>
+        <div className="portfolio-item-description">
           {repo.name === 'learn'
             ? codeMentoring
             : repo.description}
@@ -115,15 +94,15 @@ const PortfolioItem = ({repo}) => {
         </div>
       </div>
     </div>
-    <div className="col-lg-8 col-sm-12">
+    <div className="portfolio-item-right">
       <div className="portfolio-item-header">
-        <Img
+        <img
           src={repo.name === 'learn' ? Learn : img}
           alt="portfolio project"
         />
       </div>
     </div>
-  </RowDiv>);
+  </div>);
 }
 
 export default PortfolioItem;
