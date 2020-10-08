@@ -3,7 +3,7 @@ import { Element } from 'react-scroll';
 import './resources/styles.css';
 import Header from './components/sections/Header';
 import Introduction from './components/sections/Introduction';
-// import AboutMe from './components/sections/AboutMe';
+import AboutMe from './components/sections/AboutMe';
 import MyWork from './components/sections/MyWork';
 import ContactMe from './components/sections/ContactMe';
 import GithubState from './components/context/github/githubState';
@@ -22,9 +22,9 @@ function App() {
           <Element name="myWork">
             <MyWork />
           </Element>
-          {/* <Element name="aboutMe">
+          <Element name="aboutMe">
             <AboutMe />
-          </Element> */}
+          </Element>
         </div>
         <Element name="contactMe">
           <ContactMe />

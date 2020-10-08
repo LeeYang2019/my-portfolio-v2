@@ -1,3 +1,4 @@
+import { PictureAsPdfSharp } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import Learn from '../../../resources/images/projectLearn.png';

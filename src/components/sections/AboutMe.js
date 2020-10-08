@@ -11,14 +11,21 @@ const AboutMe = () => {
             working as a business analyst. Having that sort of exposure has
             cultivated in me an interest and passion for software development.
           </p>
-          <a
+          {/* <a
             href="x"
             className="demo_btn btn"
             target="_blank"
             rel="noopener noreferrer"
           >
             View Resume
-          </a>
+          </a> */}
+          <div>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-java"></i>
+          <i className="fab fa-node-js"></i>
+          <i className="fab fa-react"></i>
+          <i class="fab fa-aws"></i>
+          </div>
         </div>
       </section>
     </div>
