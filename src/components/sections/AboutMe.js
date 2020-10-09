@@ -63,7 +63,7 @@ const AboutMe = () => {
                 testing. Through working with system and technical anaysts, I became interested in software development.
               </p>
               <a
-                href="https://drive.google.com/file/d/1Cf7NjLIGGthAbJWZG6wOJzapMJB-Vuy2/view?usp=sharing"
+                href="https://drive.google.com/file/d/10rOX4lXumm7eREzASXHeFLoageOmkWpb/view?usp=sharing"
                 className="demo_btn btn"
                 target="_blank"
                 rel="noopener noreferrer"
