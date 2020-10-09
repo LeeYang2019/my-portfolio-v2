@@ -38,9 +38,11 @@ const AboutDiv = style.div`
 
 const Technologies = style.div`
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 
-  & > i {
-    margin: 15px;
+  & > img {
+    margin: 15px 15px 15px 0;
   }
 
 `;
@@ -55,9 +57,12 @@ const AboutMe = () => {
             <AboutDiv>
             <h2 className="section__title section__title--about">Who I am</h2>
               <p>
-                I am an aspiring software developer with several years of experience
-                working as a business analyst. Having that sort of exposure has
-                cultivated in me an interest and passion for software development.
+                I am a <strong>problem solver</strong> who also happens to be an aspiring software developer. 
+                I have several years of experience as a business analyst working with clients and stakeholders. 
+                Through working so closely with system and technical anaysts, I became interested in software development.
+              </p>
+              <p>
+                
               </p>
               <a
                 href="https://drive.google.com/file/d/1qgHTtbL5catL7Gnn5Qe4jiqBXcdUXPYL/view?usp=sharing"
@@ -69,15 +74,108 @@ const AboutMe = () => {
               </a>
             </AboutDiv>
         </div>
-        <div className="col-lg-7 col-sm-12">
+        <div className="col-lg-12 col-sm-12">
           <AboutDiv>
-            <h3 className="section__title section__title--about">Technologies I have Experience  With</h3>
+            <h3 className="section__title section__title--about">Technologies I have experience  With</h3>
             <Technologies>
-            <i class="fab fa-js"></i>
-            <i class="fab fa-java"></i>
-            <i className="fab fa-node-js"></i>
-            <i className="fab fa-react"></i>
-            <i class="fab fa-aws"></i>
+            <img
+              src="https://icongr.am/devicon/css3-original.svg?size=50&color=currentColor"
+              alt="css3"
+            />
+            <img
+              src="https://icongr.am/devicon/html5-original.svg?size=50&color=currentColor"
+              alt="html5"
+            />
+
+            <img
+              src="https://icongr.am/devicon/javascript-original.svg?size=50&color=currentColor"
+              alt="javascript"
+            />
+
+  
+            <img
+              src="https://icongr.am/devicon/java-original.svg?size=50&color=currentColor"
+              alt="java"
+            />
+
+      
+            <img
+              src="https://icongr.am/devicon/react-original.svg?size=50&color=currentColor"
+              alt="react"
+            />
+
+            <img
+              src="https://icongr.am/devicon/nodejs-original.svg?size=50&color=currentColor"
+              alt="node"
+            />
+
+            <img
+              src="https://icongr.am/devicon/c-original.svg?size=50&color=currentColor"
+              alt="c-programming"
+            />
+
+            <img
+              src="https://icongr.am/devicon/php-original.svg?size=50&color=currentColor"
+              alt="php"
+            />
+          
+            <img
+              src="https://icongr.am/devicon/mysql-original.svg?size=50&color=currentColor"
+              alt="mysql"
+            />
+      
+            <img
+              src="https://icongr.am/devicon/mongodb-original.svg?size=50&color=currentColor"
+              alt="mongodb"
+            />
+        
+      
+            <img
+              src="https://icongr.am/devicon/postgresql-original.svg?size=50&color=currentColor"
+              alt="postgresql"
+            />
+      
+        
+            <img
+              src="https://icongr.am/devicon/heroku-original.svg?size=50&color=currentColor"
+              alt="heroku"
+            />
+        
+      
+            <img
+              src="https://icongr.am/devicon/amazonwebservices-original.svg?size=50&color=currentColor"
+              alt="aws"
+            />
+      
+      
+            <img
+              src="https://icongr.am/devicon/docker-original.svg?size=50&color=currentColor"
+              alt="docker"
+            />
+        
+        
+            <img
+              src="https://icongr.am/devicon/git-original.svg?size=50&color=currentColor"
+              alt="git"
+            />
+
+            <img
+              src="https://icongr.am/devicon/github-original.svg?size=50&color=currentColor"
+              alt="github"
+            />
+      
+        
+            <img
+              src="https://icongr.am/devicon/atom-original.svg?size=50&color=currentColor"
+              alt="atom"
+            />
+        
+      
+            <img
+              src="https://icongr.am/devicon/visualstudio-plain.svg?size=50&color=currentColor"
+              alt="visual studio"
+            />
+           
             </Technologies>
           </AboutDiv>
         </div>

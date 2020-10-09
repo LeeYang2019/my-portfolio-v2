@@ -20,7 +20,6 @@ const TitleH3 = style.h3`
 const Img = style.img`
   max-width: 100%;
   height: auto;
-
   vertical-align: middle;
   border-style: none;
 `;
