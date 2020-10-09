@@ -1,5 +1,10 @@
 import React, { Fragment } from 'react';
+import style from 'styled-components';
 import NhialeeImg from '../../resources/images/Nhialee2.jpg';
+
+const Img = style.img`
+  filter: grayscale(30%);
+`;
 
 const Introduction = () => {
   return (
@@ -11,7 +16,7 @@ const Introduction = () => {
         <p className="section__subtitle section__subtitle--intro">
           full-stack dev
         </p>
-        <img src={NhialeeImg} alt="Nhialee" className="intro__image" />
+        <Img src={NhialeeImg} alt="Nhialee" className="intro__image" />
       </section>
     </Fragment>
   );

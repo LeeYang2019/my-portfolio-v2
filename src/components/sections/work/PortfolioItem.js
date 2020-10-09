@@ -17,11 +17,21 @@ const TitleH3 = style.h3`
   font-size: 2.5rem;
 `;
 
+const Description = style.div`
+  font-size:16px;
+`;
+
+const CodeMentoring = style.div`
+  font-size:16px;
+  margin-top: 0.5em;
+`;
+
 const Img = style.img`
   max-width: 100%;
   height: auto;
   vertical-align: middle;
   border-style: none;
+  filter: grayscale(30%);
 `;
 
 const fetchRepos = async (name) => {
@@ -74,7 +84,7 @@ const PortfolioItem = ({repo}) => {
     <div className="col-lg-5 col-sm-12">
       <div className="portfolio-item-body">
         <TitleH3>{repo.name}</TitleH3>
-        <div className="mb-4">
+        <Description>
           {repo.name === 'learn'
             ? codeMentoring
             : repo.description}
@@ -83,13 +93,13 @@ const PortfolioItem = ({repo}) => {
               {inviteCode}
             </div>
           ) : null}
-        </div>
+        </Description>
         {tech ? (
           <div className="portfolio-item-technologies">{tech}</div>
         ) : repo.name === 'learn' ? (
-          <div className="mb-4">
+          <CodeMentoring>
             {codeMentoringTech}
-          </div>
+          </CodeMentoring>
         ) : null}
         <div className="portfolio_btns">
           <a

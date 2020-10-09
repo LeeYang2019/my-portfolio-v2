@@ -58,11 +58,9 @@ const AboutMe = () => {
             <h2 className="section__title section__title--about">Who I am</h2>
               <p>
                 I am a <strong>problem solver</strong> who also happens to be an aspiring software developer. 
-                I have several years of experience as a business analyst working with clients and stakeholders. 
-                Through working so closely with system and technical anaysts, I became interested in software development.
-              </p>
-              <p>
-                
+                In my past life, I was a business analyst with extensive experience working with both internal and external stakeholders,
+                researching and gathering business requirements, facilitating workgroup discussions and performing user acceptance
+                testing. Through working with system and technical anaysts, I became interested in software development.
               </p>
               <a
                 href="https://drive.google.com/file/d/1qgHTtbL5catL7Gnn5Qe4jiqBXcdUXPYL/view?usp=sharing"

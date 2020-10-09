@@ -12,7 +12,7 @@
   --fw-bold: 900;
 
   --clr-light: #1b262c;
-  --clr-dark: #bbe1fa;
+  --clr-dark: rgba(187, 225, 250, .60);
   --clr-accent: #3282b8;
   --clr-accent2: #84a9ac;
   --clr-light2: #e7dfd5;
@@ -122,7 +122,7 @@ h3 {
 }
 
 .section__title {
-  margin-bottom: 0.25em;
+  margin-bottom: 1.5rem;
 }
 
 .section__title--intro {
@@ -159,7 +159,7 @@ header .header_logo {
 }
 
 header .header_logo_lee {
-  font-size: 20px;
+  font-size: 16px;
   font-family: var(--ff-secondary);
 }
 
@@ -319,7 +319,7 @@ header .header_logo_lee {
 .portfolio-item-technologies {
   margin-top: 0.5em;
   text-align: left;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .portfolio-item-description-inviteCode {
