@@ -8,6 +8,7 @@ const RowDiv = style.div`
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  margin-bottom: 100px;
 `;
 
 const TitleH3 = style.h3`
@@ -71,7 +72,7 @@ const PortfolioItem = ({repo}) => {
   const inviteCode = `Invitecode: "blm"`;
 
   return (<RowDiv>
-    <div className="col-lg-4 col-sm-12">
+    <div className="col-lg-5 col-sm-12">
       <div className="portfolio-item-body">
         <TitleH3>{repo.name}</TitleH3>
         <div className="mb-4">
@@ -87,7 +88,7 @@ const PortfolioItem = ({repo}) => {
         {tech ? (
           <div className="portfolio-item-technologies">{tech}</div>
         ) : repo.name === 'learn' ? (
-          <div className="portfolio-item-technologies">
+          <div className="mb-4">
             {codeMentoringTech}
           </div>
         ) : null}
@@ -115,7 +116,7 @@ const PortfolioItem = ({repo}) => {
         </div>
       </div>
     </div>
-    <div className="col-lg-8 col-sm-12">
+    <div className="col-lg-7 col-sm-12">
       <div className="portfolio-item-header">
         <Img
           src={repo.name === 'learn' ? Learn : img}

@@ -11,10 +11,10 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #e4f3fd;
-  --clr-dark: #000000;
+  --clr-light: #111111;
+  --clr-dark: #00204a;
   --clr-accent: #005792;
-  --clr-accent2: #84a9ac;
+  --clr-accent2: #feffff;
   --clr-light2: #e7dfd5;
 
   --fs-h1: 3rem;
@@ -89,7 +89,6 @@ img {
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
   margin-right: 1em;
-  border-radius: 0 !important;
 }
 
 .btn:hover {
@@ -229,6 +228,9 @@ header .header_logo_lee {
   }
 
   .portfolio {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em; */
     width: 1000px;
     display: flex;
     flex-wrap: wrap;
@@ -240,6 +242,12 @@ header .header_logo_lee {
 @media (min-width: 600px) {
   .about-me {
     display: flex;
+    /* grid-template-columns: 1fr 300px;
+    grid-template-areas:
+      'title img'
+      'subtitle img'
+      'text img';
+    grid-column-gap: 2em; */
     flex-wrap: wrap;
   }
 
@@ -281,7 +289,15 @@ header .header_logo_lee {
   margin-bottom: 2em;
 }
 
+/* .portfolio {
+  display: grid;
+  grid-gap: 2em;
+} */
+
 .portfolio-item {
+  /* background: var(--clr-accent2); */
+  /* color: var(--clr-dark);
+  box-shadow: var(--bs); */
   display: grid;
   grid-template-columns: 55% 45%;
   grid-gap: 2em;
@@ -306,7 +322,7 @@ header .header_logo_lee {
 .portfolio-item-body {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 20px;
   min-height: 250px;
 }
 
@@ -394,7 +410,7 @@ header .header_logo_lee {
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  padding: 15px 0 0 0;
+  padding: 0;
 }
 
 .social-list__item {

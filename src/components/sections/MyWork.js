@@ -11,7 +11,7 @@ const Wrapper = style.div`
   margin-left: auto;
 
   @media (min-width: 992px) {
-    max-width: 960px;
+    max-width: 1200px;
   }
   @media (min-width: 768px) {
     min-width: 720px;
