@@ -351,8 +351,8 @@ header .header_logo_lee {
 
 /*Footer*/
 .footer {
-  background: #00204a;
-  color: var(--clr-dark);
+  background: var(--clr-accent);
+  color: #ffffff;
   text-align: center;
   padding: 2.5em 0;
   font-size: var(--fs-h3);
