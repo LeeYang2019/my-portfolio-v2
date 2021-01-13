@@ -22,24 +22,24 @@ const Wrapper = style.div`
 `;
 
 const MyWork = () => {
-  const githubContext = useContext(GithubContext);
-  const { searchUserRepos, repos } = githubContext;
+	const githubContext = useContext(GithubContext);
+	const { searchUserRepos, repos } = githubContext;
 
-  useEffect(() => {
-    searchUserRepos();
-    // eslint-disable-next-line
-  }, []);
+	useEffect(() => {
+		searchUserRepos();
+		// eslint-disable-next-line
+	}, []);
 
-  return (
-    <Fragment>
-      <section className="my-work">
-        <h2 className="section__title">Portfolio</h2>
-        <Wrapper>
-          <PortfolioItems repos={repos} />
-        </Wrapper>
-      </section>
-    </Fragment>
-  );
+	return (
+		<Fragment>
+			<section className="my-work">
+				<h2 className="section__title">Portfolio</h2>
+				<Wrapper>
+					<PortfolioItems repos={repos} />
+				</Wrapper>
+			</section>
+		</Fragment>
+	);
 };
 
 export default MyWork;

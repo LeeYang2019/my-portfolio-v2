@@ -31,9 +31,9 @@ const AboutDiv = style.div`
   margin-top: 50px;
   float: left;
 
-  & > h3 {
-    border-bottom: 1px solid white;
-  }
+//   & > h3 {
+//     border-bottom: 1px solid white;
+//   }
 `;
 
 const Technologies = style.div`
@@ -56,16 +56,20 @@ const AboutMe = () => {
 						<AboutDiv>
 							<h2 className="section__title section__title--about">Who I am</h2>
 							<p>
-								I am a <strong>problem solver</strong> who also happens to be an
-								aspiring software developer. In my past life, I was a business
-								analyst with extensive experience working with both internal and
-								external stakeholders, researching and gathering business
-								requirements, facilitating workgroup discussions and performing
-								user acceptance testing. Through working with system and
-								technical anaysts, I became interested in software development.
+								I am first and foremost a <strong>problem solver</strong> and
+								then a software developer. I am passionate about working with
+								and helping people solve problems through technology.
 							</p>
+							<p>
+								Prior to relocating to Toronto at the start of 2020, I was a
+								business analyst. Through working with stakeholders, researching
+								and gathering business requirements, approving design
+								documentation, and performing user acceptance testing I became
+								interested in software development.
+							</p>
+							<br />
 							<a
-								href="https://drive.google.com/file/d/1dOGuFW1XBARoa5cILC-vVdsYuO4tzr6m/view?usp=sharing"
+								href="https://drive.google.com/file/d/1jNodw9HZpT_VHQoxr8ujbdvgPApRABEA/view?usp=sharing"
 								className="demo_btn btn"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -139,10 +143,10 @@ const AboutMe = () => {
 									alt="heroku"
 								/>
 
-								<img
+								{/* <img
 									src="https://icongr.am/devicon/amazonwebservices-original.svg?size=50&color=currentColor"
 									alt="aws"
-								/>
+								/> */}
 
 								<img
 									src="https://icongr.am/devicon/docker-original.svg?size=50&color=currentColor"
